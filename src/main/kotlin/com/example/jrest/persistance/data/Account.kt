@@ -5,10 +5,11 @@ import javax.persistence.*
 @Entity
 data class Account(
         @Id @GeneratedValue
-        var id: Int,
+        var id: Int? = null,
         var email: String,
-        @ManyToOne
-        var tag: Tag,
-        @OneToMany
+        @OneToMany @JoinColumn(name = "account_id")
         var todos: List<Todo> = mutableListOf()
-)
+) {
+    constructor(email: String) : this(null, email)
+    constructor() : this("")
+}

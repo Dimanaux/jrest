@@ -7,7 +7,7 @@ import javax.persistence.ManyToMany
 @Entity
 data class Tag(
         @Id
-        var label: String,
-        @ManyToMany
-        val todos: Set<Todo>
+        val label: String,
+        @ManyToMany(mappedBy = "tags")
+        val todos: MutableSet<Todo> = mutableSetOf()
 )

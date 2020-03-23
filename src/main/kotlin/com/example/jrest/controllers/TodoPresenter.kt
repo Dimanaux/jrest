@@ -16,14 +16,12 @@ class TodoPresenter(@Autowired private val links: RepositoryEntityLinks)
     override fun process(model: EntityModel<Todo>): EntityModel<Todo> {
         val todo: Todo = model.content ?: throw IllegalArgumentException("No todo found")
         if (todo.canBeDone()) {
-            model.add(linkTo(methodOn(TodosController::class.java).done(todo.id)!!).withRel("done"))
+            model.add(linkTo(methodOn(TodosController::class.java).done(todo.id!!)!!).withRel("done"))
         }
-
         if (todo.canBeFailed()) {
-            model.add(linkTo(methodOn(TodosController::class.java).fail(todo.id)!!).withRel("fail"))
+            model.add(linkTo(methodOn(TodosController::class.java).fail(todo.id!!)!!).withRel("fail"))
 //            model.add(links.linkToItemResource(Todo::class.java, todo.id!!).withRel("fail"))
         }
-
         return model
     }
 }

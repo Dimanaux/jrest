@@ -1,0 +1,12 @@
+|===
+|Path|Type|Description
+
+|`+text+`
+|`+String+`
+|Todo text (what to do)
+
+|`+status+`
+|`+String+`
+|Todo status: New, Done or Overdue
+
+|===

@@ -1,4 +1,4 @@
-package com.example.jrest.interactors.todo
+package com.example.jrest.services
 
 import com.example.jrest.persistance.data.Todo
 import com.example.jrest.persistance.repositories.TodoRepository

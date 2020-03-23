@@ -1,0 +1,25 @@
+= Todos API
+
+== Methods
+
+|===
+| HTTP Verb | Purpose
+| `PUT`
+| Update given todo
+|===
+
+=== Mark Todo as done
+
+You can mark as done Todos with status `Done`
+
+.request
+
+include::{snippets}/todos/http-request.adoc[]
+
+.response
+
+include::{snippets}/todos/http-response.adoc[]
+
+.response-fields
+
+include::{snippets}/todos/response-fields.adoc[]

@@ -1,0 +1,4 @@
+[source,bash]
+----
+$ curl 'http://localhost:8080/todos/1/done' -i -X PUT
+----
